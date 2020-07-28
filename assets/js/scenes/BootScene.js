@@ -33,6 +33,6 @@ class BootScene extends Phaser.Scene {
     }
 
     create () {
-        this.scene.start('End');
+        this.scene.start('Title');
     }
 }
