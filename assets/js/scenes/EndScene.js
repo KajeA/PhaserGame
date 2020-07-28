@@ -14,8 +14,7 @@ class EndScene extends Phaser.Scene {
 
     banner() {
         this.happy = this.add.image(400, 250, 'happy');
-        this.happy.setScale(0.75);
-
+        this.happy.setScale(0.65);
     }
 
 }

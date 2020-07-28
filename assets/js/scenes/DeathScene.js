@@ -14,7 +14,7 @@ class DeathScene extends Phaser.Scene {
 
     endgame() {
         this.dead = this.add.image(400, 250, 'youdied');
-        this.dead.setScale(1.2);
+        this.dead.setScale(1);
     }
 
 }

@@ -48,14 +48,11 @@ class GameScene extends Phaser.Scene {
 
 
     createWalls() {
-        this.wall1 = this.physics.add.image((Math.floor(Math.random() * 600)), (Math.floor(Math.random() * 300)), 'wall');
-        this.wall2 = this.physics.add.image((Math.floor(Math.random() * 500)), (Math.floor(Math.random() * 400)), 'wall');
         this.wall3 = this.physics.add.image((Math.floor(Math.random() * 600)), (Math.floor(Math.random() * 600)), 'wall');
-        this.wall3.setImmovable();
-        this.wall4 = this.physics.add.image((Math.floor(Math.random() * 700)), (Math.floor(Math.random() * 200)), 'wall');
-        this.wall4.setImmovable();
+        this.wall3.setImmovable()
+        this.wall4 = this.physics.add.image((Math.floor(Math.random() * 700)), (Math.floor(Math.random() * 200)), 'wall');  
+        this.wall4.setImmovable()
         this.wall5 = this.physics.add.image((Math.floor(Math.random() * 500)), (Math.floor(Math.random() * 100)), 'wall');
-        this.wall5.setImmovable();
     }
 
     createInput() {
@@ -63,8 +60,6 @@ class GameScene extends Phaser.Scene {
     }
 
     addCollisions() {
-        this.physics.add.collider(this.player, this.wall1);
-        this.physics.add.collider(this.player, this.wall2);
         this.physics.add.collider(this.player, this.wall3);
         this.physics.add.collider(this.player, this.wall4);
         this.physics.add.collider(this.player, this.wall5);
@@ -81,7 +76,6 @@ class GameScene extends Phaser.Scene {
     }
 
     death() {
-        
         this.time.delayedCall(250, this.scene.launch('Death'), [], this);
     }
 
